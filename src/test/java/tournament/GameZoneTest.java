@@ -97,7 +97,7 @@ class GameZoneTest {
         Exception exception = assertThrows(Exception.class, () -> {
             gameZone.round("Maksim", "Dima");
         });
-        Assertions.assertNotNull(exception.getMessage());
+        Assertions.assertNotNull(exception.getMessage().contains("Не зарегистрирован игрок"));
     }
 
     @Test
